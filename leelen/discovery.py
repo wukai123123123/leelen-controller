@@ -27,6 +27,7 @@ class Discovery(threading.Thread):
     def __init__(self, number, addr, device_type=DeviceType.BASIC,
                  desc='AK01-FJV31001-V0.01-V11.38_20180410', port=6789,
                  timeout=0.2) -> None:
+        super().__init__()
         self.number = number
         self.addr = addr
         self.device_type = device_type
